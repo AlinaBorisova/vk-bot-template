@@ -1,8 +1,8 @@
 const VkBot = require('node-vk-bot-api');
 const Markup = require('node-vk-bot-api/lib/markup')
 const Scene = require('node-vk-bot-api/lib/scene');
-const Session = require('node-vk-bot-api/lib/session');
-const Stage = require('node-vk-bot-api/lib/stage');
+// const Session = require('node-vk-bot-api/lib/session');
+// const Stage = require('node-vk-bot-api/lib/stage');
 // token SmartConversion
 // const token = 'vk1.a.3NOsk6ecXQi6zkDHhcLVA262UKfvYhCzXSQT8Yyk36SEzrPYhDbcsKlf6Oq3fQlTvoL028BNTteO_BCbOPtBcBIfyFNGPE0u5pdPzXtZ2vHflrQSZp_15h1s5dcUV4IC2NPTAXcm_8f0H1OPaaQPNQ9SOmaMJ8SaxwR1ofiGTO5GX5zvjGUjYMh3qvTonx66U4HbgRYjFjYkWctwVL8NEA';
 // token Test for bot
@@ -92,11 +92,11 @@ const scene = new Scene('meet',
   },
 );
 
-const session = new Session();
-const stage = new Stage(scene);
-
-bot.use(session.middleware());
-bot.use(stage.middleware());
+// const session = new Session();
+// const stage = new Stage(scene);
+//
+// bot.use(session.middleware());
+// bot.use(stage.middleware());
 
 
 
@@ -158,13 +158,13 @@ const start = () => {
     }
   });
 
-  bot.command('Связаться со мной', async (ctx) => {
-    try {
-      ctx.scene.enter('meet');
-    } catch (e) {
-      console.error(e);
-    }
-  });
+  // bot.command('Связаться со мной', async (ctx) => {
+  //   try {
+  //     ctx.scene.enter('meet');
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // });
 
 
   bot.startPolling((err) => {
